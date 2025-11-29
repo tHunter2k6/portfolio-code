@@ -170,6 +170,16 @@ class Ignite extends StatelessWidget {
                             ),
                             SizedBox(height: 10),
                             AutoSizeText(
+                              "• Forex Simulation: Experience real-time currency trading with dynamic market fluctuations.",
+                              minFontSize: 1,
+                              maxLines: 3,
+                              style: TextStyle(
+                                color: Colors.grey[200],
+                                fontSize: ScreenUtil().setSp(14),
+                              ),
+                            ),
+                            SizedBox(height: 10),
+                            AutoSizeText(
                               "• Set Room Booking: Reserve slots for advertisement shoots and activities.",
                               minFontSize: 1,
                               maxLines: 3,
@@ -180,7 +190,7 @@ class Ignite extends StatelessWidget {
                             ),
                             SizedBox(height: 10),
                             AutoSizeText(
-                              "• Forex Simulation: Experience real-time currency trading with dynamic market fluctuations.",
+                              "• Submissions: Submit all your documents on the app!.",
                               minFontSize: 1,
                               maxLines: 3,
                               style: TextStyle(
@@ -299,6 +309,25 @@ class Ignite extends StatelessWidget {
                                 ),
                                 SizedBox(height: 15),
                                 AutoSizeText(
+                                  "• Forex Simulation:",
+                                  style: TextStyle(
+                                    color: Colors.grey[200],
+                                    fontSize: ScreenUtil().setSp(18),
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                  minFontSize: 1,
+                                ),
+                                AutoSizeText(
+                                  "  A real-time IC trading market that moves based on simulated economic activity.",
+                                  style: TextStyle(
+                                    color: Colors.grey[200],
+                                    fontSize: ScreenUtil().setSp(14),
+                                  ),
+                                  minFontSize: 1,
+                                  maxLines: 3,
+                                ),
+                                SizedBox(height: 15),
+                                AutoSizeText(
                                   "• Set Room Booking:",
                                   style: TextStyle(
                                     color: Colors.grey[200],
@@ -318,7 +347,7 @@ class Ignite extends StatelessWidget {
                                 ),
                                 SizedBox(height: 15),
                                 AutoSizeText(
-                                  "• Forex Simulation:",
+                                  "• Submissions:",
                                   style: TextStyle(
                                     color: Colors.grey[200],
                                     fontSize: ScreenUtil().setSp(18),
@@ -327,7 +356,7 @@ class Ignite extends StatelessWidget {
                                   minFontSize: 1,
                                 ),
                                 AutoSizeText(
-                                  "  A real-time IC trading market that moves based on simulated economic activity.",
+                                  "  Why go to google forms when you can directly upload your documents here.",
                                   style: TextStyle(
                                     color: Colors.grey[200],
                                     fontSize: ScreenUtil().setSp(14),
