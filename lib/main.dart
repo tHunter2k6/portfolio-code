@@ -9,9 +9,7 @@ import 'package:mywebsite/pages/home_page.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
-  runApp(
-    const MyApp(),
-  );
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -25,7 +23,10 @@ class MyApp extends StatelessWidget {
 
     if (kIsWeb) {
       if (MediaQuery.of(context).orientation == Orientation.landscape) {
-        designSize = const Size(1440, 900);
+        double screenWidth = MediaQuery.of(context).size.width;
+        double screenHeight = MediaQuery.of(context).size.height;
+
+        designSize = Size(screenWidth, screenHeight);
       } else {
         designSize = const Size(375, 812);
       }
@@ -35,16 +36,15 @@ class MyApp extends StatelessWidget {
       builder: (context, child) => MaterialApp(
         debugShowCheckedModeBanner: false,
         title: "sanan_sheikh",
-        scrollBehavior: const MaterialScrollBehavior().copyWith(dragDevices: {
-          PointerDeviceKind.touch,
-          PointerDeviceKind.mouse,
-        }),
+        scrollBehavior: const MaterialScrollBehavior().copyWith(
+          dragDevices: {PointerDeviceKind.touch, PointerDeviceKind.mouse},
+        ),
         theme: ThemeData(
           colorScheme: const ColorScheme.dark(),
           useMaterial3: true,
           fontFamily: 'Montserrat',
         ),
-        home: const HomePage(),
+        home: HomePageResponsive(),
       ),
     );
   }

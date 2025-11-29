@@ -23,7 +23,7 @@ void _launchURL(String url) async {
 }
 
 List pages = [
-  HomePage(),
+  HomePageResponsive(),
   ResumePage(),
   AboutPage(),
   Projects(),
@@ -87,7 +87,7 @@ class _DesktopState extends State<Desktop> {
                     pageChanger(1);
                   },
                   child: AutoSizeText(
-                    "resume",
+                    "about",
                     style: TextStyle(
                       fontSize: 20.sp,
                       fontWeight:
@@ -102,7 +102,7 @@ class _DesktopState extends State<Desktop> {
                     pageChanger(2);
                   },
                   child: AutoSizeText(
-                    "about",
+                    "resume",
                     style: TextStyle(
                       fontSize: 20.sp,
                       fontWeight:
@@ -198,13 +198,14 @@ class _DesktopState extends State<Desktop> {
               children: [
                 ScrollTransformItem(
                   builder: (scrollOffset) {
+                    // white border
                     return Padding(
                       padding:
                           EdgeInsets.only(top: ScreenUtil().setWidth(90.0)),
                       child: Center(
                         child: Container(
-                          width: ScreenUtil().setWidth(650),
-                          height: ScreenUtil().setHeight(420),
+                          width: 600.w,
+                          height: 300.h,
                           decoration: BoxDecoration(
                             border: Border.all(color: Colors.white, width: 3),
                           ),
@@ -213,10 +214,10 @@ class _DesktopState extends State<Desktop> {
                     );
                   },
                   offsetBuilder: (scrollOffset) {
-                    if (scrollOffset < 450.h) {
+                    if (scrollOffset < 300.h) {
                       return Offset(0, scrollOffset);
                     } else {
-                      return Offset(0, 450.h);
+                      return Offset(0, 300.h);
                     }
                   },
                 ),
@@ -224,24 +225,25 @@ class _DesktopState extends State<Desktop> {
                   offsetBuilder: (scrollOffset) => Offset(0, -70.h),
                   // Offset(0, min(600 - scrollOffset, 0)),
                   builder: (scrollOffset) {
-                    double reveal = ((scrollOffset) / 500.h).clamp(0.1, 1.0);
+                    double reveal = ((scrollOffset) / 350.h).clamp(0.1, 1.0);
 
                     return Center(
                       child: SizedBox(
-                        width: ScreenUtil().setWidth(800),
-                        height: ScreenUtil().setHeight(600),
+                        width: 600.w,
+                        height: 450.h,
                         child: Stack(
                           children: [
                             Stack(
                               children: [
+                                // sanan sheikh
                                 ClipRect(
                                   child: Align(
                                     alignment: Alignment.topCenter,
                                     child: Stack(
                                       children: [
                                         Container(
-                                          width: ScreenUtil().setWidth(800),
-                                          height: ScreenUtil().setHeight(600),
+                                          width: 600.w,
+                                          height: 450.h,
                                           decoration: BoxDecoration(
                                             image: DecorationImage(
                                               fit: BoxFit.cover,
@@ -258,6 +260,7 @@ class _DesktopState extends State<Desktop> {
                             ),
                             Stack(
                               children: [
+                                // image
                                 ClipRect(
                                   child: Align(
                                     alignment: Alignment.topCenter,
@@ -265,8 +268,8 @@ class _DesktopState extends State<Desktop> {
                                     child: Stack(
                                       children: [
                                         Container(
-                                          width: ScreenUtil().setWidth(800),
-                                          height: ScreenUtil().setHeight(600),
+                                          width: 600.w,
+                                          height: 450.h,
                                           decoration: BoxDecoration(
                                             image: DecorationImage(
                                               fit: BoxFit.cover,
@@ -295,9 +298,9 @@ class _DesktopState extends State<Desktop> {
                       return SingleChildScrollView(
                         child: Column(
                           children: [
-                            SizedBox(
-                              height: 100,
-                            ),
+                            // SizedBox(
+                            //   height: 100,
+                            // ),
                             Padding(
                               padding: EdgeInsets.symmetric(
                                 horizontal: ScreenUtil().setWidth(100),
@@ -319,13 +322,15 @@ class _DesktopState extends State<Desktop> {
                                 ),
                               ),
                             ),
-                            SizedBox(
-                              height: ScreenUtil().setHeight(100),
-                            ),
+
                             Padding(
                                 padding:
                                     EdgeInsets.symmetric(horizontal: 150.0),
                                 child: MyContainersGrid(isRecent: true)),
+
+                            SizedBox(
+                              height: ScreenUtil().setHeight(100),
+                            ),
                           ],
                         ),
                       );
@@ -335,9 +340,9 @@ class _DesktopState extends State<Desktop> {
               ],
             )
           : pageIndex == 1
-              ? ResumePage()
+              ? AboutPage()
               : pageIndex == 2
-                  ? AboutPage()
+                  ? ResumePage()
                   : pageIndex == 3
                       ? Projects()
                       : ContactPage(),

@@ -6,26 +6,26 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:mywebsite/pages/home_page.dart';
 import 'package:mywebsite/theme/my_theme.dart';
 
-class Ignite extends StatelessWidget {
-  const Ignite({super.key});
+class Lrautos extends StatelessWidget {
+  const Lrautos({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: scaffoldBackgroundColor,
       appBar: AppBar(
-        backgroundColor: myAppBarColor,
         iconTheme: IconThemeData(
           color: scaffoldBackgroundColor,
         ),
+        backgroundColor: myAppBarColor,
         title: AutoSizeText(
+          'L R A U T O S',
+          minFontSize: 1,
+          maxLines: 1,
           style: TextStyle(
             color: scaffoldBackgroundColor,
             fontWeight: FontWeight.bold,
           ),
-          'I G N I T E',
-          minFontSize: 1,
-          maxLines: 1,
         ),
         centerTitle: true,
       ),
@@ -36,7 +36,6 @@ class Ignite extends StatelessWidget {
                   padding: EdgeInsets.all(ScreenUtil().setWidth(20)),
                   child: ListView(
                     children: [
-                      // ----- TOP IMAGE CONTAINER -----
                       Container(
                         padding: EdgeInsets.all(ScreenUtil().setWidth(10)),
                         decoration: BoxDecoration(
@@ -84,7 +83,7 @@ class Ignite extends StatelessWidget {
                                             child: AspectRatio(
                                               aspectRatio: 16 / 9,
                                               child: Image.asset(
-                                                  'lib/assets/ignite.PNG'),
+                                                  'lib/assets/lr1.jpeg'),
                                             ),
                                           ),
                                         ),
@@ -102,16 +101,15 @@ class Ignite extends StatelessWidget {
                               borderRadius: BorderRadius.circular(15),
                               image: DecorationImage(
                                 fit: BoxFit.cover,
-                                image: AssetImage('lib/assets/ignite.PNG'),
+                                image: AssetImage('lib/assets/lr1.jpeg'),
                               ),
                             ),
                           ),
                         ),
                       ),
-
-                      SizedBox(height: ScreenUtil().setHeight(20)),
-
-                      // ----- UPDATED DESCRIPTION CONTAINER (PORTRAIT) -----
+                      SizedBox(
+                        height: ScreenUtil().setHeight(20),
+                      ),
                       Container(
                         padding: EdgeInsets.all(ScreenUtil().setWidth(30)),
                         decoration: BoxDecoration(
@@ -126,87 +124,52 @@ class Ignite extends StatelessWidget {
                           ],
                         ),
                         child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
                             AutoSizeText(
-                              "An all round app for FPS A level's trademark event,Ignite, espesially designed to allow much more easier management and streamline everything into one place",
+                              "Automobile Workshop Customer Management System",
                               minFontSize: 1,
                               maxLines: 3,
-                              style: TextStyle(
-                                color: Colors.grey[200],
-                                fontSize: ScreenUtil().setSp(14),
-                              ),
-                            ),
-                            SizedBox(height: 10),
-                            AutoSizeText(
-                              "Key Features of the App:",
-                              minFontSize: 1,
-                              maxLines: 1,
+                              textAlign: TextAlign.center,
                               style: TextStyle(
                                 color: Color(0xFF40C4FF),
                                 fontWeight: FontWeight.bold,
+                                fontSize: ScreenUtil().setSp(18),
+                              ),
+                            ),
+                            SizedBox(height: ScreenUtil().setHeight(15)),
+                            AutoSizeText(
+                              textAlign: TextAlign.start,
+                              style: TextStyle(
+                                color: Colors.grey[200],
                                 fontSize: ScreenUtil().setSp(15),
                               ),
-                            ),
-                            SizedBox(height: 15),
-                            AutoSizeText(
-                              "• Registration: Register your team directly through the app — fast and secure.",
+                              "A complete customer management system designed specifically for an automobile workshop. The system stores detailed customer profiles, maintains full service and work history, and allows the workshop to efficiently create, save, and print invoices.",
                               minFontSize: 1,
-                              maxLines: 3,
+                              maxLines: 10,
+                            ),
+                            SizedBox(height: ScreenUtil().setHeight(15)),
+                            AutoSizeText(
+                              textAlign: TextAlign.start,
                               style: TextStyle(
                                 color: Colors.grey[200],
-                                fontSize: ScreenUtil().setSp(14),
+                                fontSize: ScreenUtil().setSp(15),
                               ),
-                            ),
-                            SizedBox(height: 10),
-                            AutoSizeText(
-                              "• Auction: Interactive bidding on your chosen industry during the summit.",
+                              "The system ensures easy tracking of every job done on every vehicle—oil changes, repairs, diagnostics, replacements, and more. Each entry is automatically saved and organized by customer and date.",
                               minFontSize: 1,
-                              maxLines: 3,
+                              maxLines: 10,
+                            ),
+                            SizedBox(height: ScreenUtil().setHeight(15)),
+                            AutoSizeText(
+                              textAlign: TextAlign.start,
                               style: TextStyle(
                                 color: Colors.grey[200],
-                                fontSize: ScreenUtil().setSp(14),
+                                fontSize: ScreenUtil().setSp(15),
                               ),
-                            ),
-                            SizedBox(height: 10),
-                            AutoSizeText(
-                              "• Set Room Booking: Reserve slots for advertisement shoots and activities.",
+                              "With invoice generation built in, the workshop can print customer bills instantly. The invoices include parts cost, service charges, labour charges, taxes, and a full breakdown of work performed.",
                               minFontSize: 1,
-                              maxLines: 3,
-                              style: TextStyle(
-                                color: Colors.grey[200],
-                                fontSize: ScreenUtil().setSp(14),
-                              ),
-                            ),
-                            SizedBox(height: 10),
-                            AutoSizeText(
-                              "• Forex Simulation: Experience real-time currency trading with dynamic market fluctuations.",
-                              minFontSize: 1,
-                              maxLines: 3,
-                              style: TextStyle(
-                                color: Colors.grey[200],
-                                fontSize: ScreenUtil().setSp(14),
-                              ),
-                            ),
-                            SizedBox(height: 10),
-                            AutoSizeText(
-                              "• User Profile: View your IC balance, industry, and booked set slots.",
-                              minFontSize: 1,
-                              maxLines: 3,
-                              style: TextStyle(
-                                color: Colors.grey[200],
-                                fontSize: ScreenUtil().setSp(14),
-                              ),
-                            ),
-                            SizedBox(height: 10),
-                            AutoSizeText(
-                              "• Timeline: Stay updated with all summit events in real time.",
-                              minFontSize: 1,
-                              maxLines: 3,
-                              style: TextStyle(
-                                color: Colors.grey[200],
-                                fontSize: ScreenUtil().setSp(14),
-                              ),
+                              maxLines: 10,
                             ),
                           ],
                         ),
@@ -219,7 +182,6 @@ class Ignite extends StatelessWidget {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      // ----- LEFT COLUMN (UPDATED LANDSCAPE DESCRIPTION) -----
                       Container(
                         width: ScreenUtil().setWidth(500),
                         padding: EdgeInsets.all(ScreenUtil().setWidth(30)),
@@ -237,149 +199,67 @@ class Ignite extends StatelessWidget {
                         child: ListView(
                           children: [
                             Column(
+                              mainAxisAlignment: MainAxisAlignment.start,
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 AutoSizeText(
-                                  "An all round app for FPS A level's trademark event,Ignite, espesially designed to allow much more easier management and streamline everything into one place",
+                                  "Automobile Workshop Customer Management System",
                                   minFontSize: 1,
-                                  maxLines: 3,
-                                  style: TextStyle(
-                                    color: Colors.grey[200],
-                                    fontSize: ScreenUtil().setSp(14),
-                                  ),
-                                ),
-                                SizedBox(height: 10),
-                                AutoSizeText(
-                                  "Key Features of the App:",
-                                  minFontSize: 1,
-                                  maxLines: 1,
+                                  maxLines: 5,
+                                  textAlign: TextAlign.start,
                                   style: TextStyle(
                                     color: Color(0xFF40C4FF),
                                     fontWeight: FontWeight.bold,
                                     fontSize: ScreenUtil().setSp(25),
                                   ),
                                 ),
-                                SizedBox(height: 20),
+                                SizedBox(height: ScreenUtil().setHeight(15)),
                                 AutoSizeText(
-                                  "• Registration:",
+                                  textAlign: TextAlign.start,
                                   style: TextStyle(
                                     color: Colors.grey[200],
                                     fontSize: ScreenUtil().setSp(18),
-                                    fontWeight: FontWeight.bold,
                                   ),
+                                  "A robust customer and vehicle management system designed for an automobile workshop. It stores customer data, complete service history, and generates invoices instantly.",
                                   minFontSize: 1,
+                                  maxLines: 10,
                                 ),
+                                SizedBox(height: ScreenUtil().setHeight(15)),
                                 AutoSizeText(
-                                  "  Register your delegation seamlessly through the app — quick and secure.",
-                                  style: TextStyle(
-                                    color: Colors.grey[200],
-                                    fontSize: ScreenUtil().setSp(14),
-                                  ),
-                                  minFontSize: 1,
-                                  maxLines: 3,
-                                ),
-                                SizedBox(height: 15),
-                                AutoSizeText(
-                                  "• Auction:",
+                                  textAlign: TextAlign.start,
                                   style: TextStyle(
                                     color: Colors.grey[200],
                                     fontSize: ScreenUtil().setSp(18),
-                                    fontWeight: FontWeight.bold,
                                   ),
+                                  "- Maintain detailed work history for every customer.",
                                   minFontSize: 1,
+                                  maxLines: 10,
                                 ),
                                 AutoSizeText(
-                                  "  Bid against other delegations in a competitive real-time auction.",
-                                  style: TextStyle(
-                                    color: Colors.grey[200],
-                                    fontSize: ScreenUtil().setSp(14),
-                                  ),
-                                  minFontSize: 1,
-                                  maxLines: 3,
-                                ),
-                                SizedBox(height: 15),
-                                AutoSizeText(
-                                  "• Set Room Booking:",
+                                  textAlign: TextAlign.start,
                                   style: TextStyle(
                                     color: Colors.grey[200],
                                     fontSize: ScreenUtil().setSp(18),
-                                    fontWeight: FontWeight.bold,
                                   ),
+                                  "- Create and print invoices with a full breakdown of services.",
                                   minFontSize: 1,
+                                  maxLines: 10,
                                 ),
                                 AutoSizeText(
-                                  "  Secure time slots for set rooms to film your advertisement creatively.",
-                                  style: TextStyle(
-                                    color: Colors.grey[200],
-                                    fontSize: ScreenUtil().setSp(14),
-                                  ),
-                                  minFontSize: 1,
-                                  maxLines: 3,
-                                ),
-                                SizedBox(height: 15),
-                                AutoSizeText(
-                                  "• Forex Simulation:",
+                                  textAlign: TextAlign.start,
                                   style: TextStyle(
                                     color: Colors.grey[200],
                                     fontSize: ScreenUtil().setSp(18),
-                                    fontWeight: FontWeight.bold,
                                   ),
+                                  "- Store parts cost, labour charges, and customer vehicle details.",
                                   minFontSize: 1,
-                                ),
-                                AutoSizeText(
-                                  "  A real-time IC trading market that moves based on simulated economic activity.",
-                                  style: TextStyle(
-                                    color: Colors.grey[200],
-                                    fontSize: ScreenUtil().setSp(14),
-                                  ),
-                                  minFontSize: 1,
-                                  maxLines: 3,
-                                ),
-                                SizedBox(height: 15),
-                                AutoSizeText(
-                                  "• User Profile:",
-                                  style: TextStyle(
-                                    color: Colors.grey[200],
-                                    fontSize: ScreenUtil().setSp(18),
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                  minFontSize: 1,
-                                ),
-                                AutoSizeText(
-                                  "  Track IC balance, your industry, and set bookings easily.",
-                                  style: TextStyle(
-                                    color: Colors.grey[200],
-                                    fontSize: ScreenUtil().setSp(14),
-                                  ),
-                                  minFontSize: 1,
-                                  maxLines: 3,
-                                ),
-                                SizedBox(height: 15),
-                                AutoSizeText(
-                                  "• Timeline:",
-                                  style: TextStyle(
-                                    color: Colors.grey[200],
-                                    fontSize: ScreenUtil().setSp(18),
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                  minFontSize: 1,
-                                ),
-                                AutoSizeText(
-                                  "  Stay updated with all IGNITE events in real time.",
-                                  style: TextStyle(
-                                    color: Colors.grey[200],
-                                    fontSize: ScreenUtil().setSp(14),
-                                  ),
-                                  minFontSize: 1,
-                                  maxLines: 3,
+                                  maxLines: 10,
                                 ),
                               ],
                             ),
                           ],
                         ),
                       ),
-
-                      // ----- RIGHT COLUMN IMAGES -----
                       Container(
                         padding: EdgeInsets.all(ScreenUtil().setWidth(30)),
                         decoration: BoxDecoration(
@@ -428,7 +308,7 @@ class Ignite extends StatelessWidget {
                                                 image: DecorationImage(
                                                   fit: BoxFit.fill,
                                                   image: AssetImage(
-                                                      'lib/assets/ignite.PNG'),
+                                                      'lib/assets/lr1.jpeg'),
                                                 ),
                                               ),
                                             ),
@@ -441,16 +321,17 @@ class Ignite extends StatelessWidget {
                               },
                               child: Container(
                                 width: ScreenUtil().setWidth(500),
-                                height: ScreenUtil().setHeight(200),
+                                height: ScreenUtil().setHeight(225),
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(20),
                                   image: DecorationImage(
                                     fit: BoxFit.fitWidth,
-                                    image: AssetImage('lib/assets/ignite.PNG'),
+                                    image: AssetImage('lib/assets/lr1.jpeg'),
                                   ),
                                 ),
                               ),
                             ),
+                            SizedBox(),
                             GestureDetector(
                               onTap: () {
                                 showDialog(
@@ -483,7 +364,7 @@ class Ignite extends StatelessWidget {
                                                 image: DecorationImage(
                                                   fit: BoxFit.fill,
                                                   image: AssetImage(
-                                                      'lib/assets/ig2.png'),
+                                                      'lib/assets/lr2.jpeg'),
                                                 ),
                                               ),
                                             ),
@@ -496,12 +377,12 @@ class Ignite extends StatelessWidget {
                               },
                               child: Container(
                                 width: ScreenUtil().setWidth(500),
-                                height: ScreenUtil().setHeight(200),
+                                height: ScreenUtil().setHeight(225),
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(20),
                                   image: DecorationImage(
                                     fit: BoxFit.fitWidth,
-                                    image: AssetImage('lib/assets/ig2.png'),
+                                    image: AssetImage('lib/assets/lr2.jpeg'),
                                   ),
                                 ),
                               ),

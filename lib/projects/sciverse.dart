@@ -4,6 +4,7 @@ import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:mywebsite/pages/home_page.dart';
+import 'package:mywebsite/theme/my_theme.dart';
 
 class Sciverse extends StatelessWidget {
   const Sciverse({super.key});
@@ -11,18 +12,18 @@ class Sciverse extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: myBackgroundColor,
+      backgroundColor: scaffoldBackgroundColor,
       appBar: AppBar(
-        backgroundColor: myAppBarColor,
         iconTheme: IconThemeData(
-          color: myBackgroundColor,
+          color: scaffoldBackgroundColor,
         ),
+        backgroundColor: myAppBarColor,
         title: AutoSizeText(
           'S C I V E R S E',
           minFontSize: 1,
           maxLines: 1,
           style: TextStyle(
-            color: myBackgroundColor,
+            color: scaffoldBackgroundColor,
             fontWeight: FontWeight.bold,
           ),
         ),
@@ -188,13 +189,14 @@ class Sciverse extends StatelessWidget {
                         ],
                       ),
                       child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           AutoSizeText(
                             style: TextStyle(
                               color: Colors.grey[200],
                               fontSize: ScreenUtil().setSp(15),
                             ),
-                            "A website for a science olympiad, SciVerse 2.0, designed to engage participants and facilitate easy registration. It features event details and a registration form that securely stores data in Firestore. This project highlights my experience in front-end design and back-end integration, ensuring a smooth and efficient user experience.",
+                            "A website for FPS A-Level's science olympiad, SciVerse 2.0, designed to engage participants and facilitate easy registration. It features event details and a registration form that securely stores data in Firestore. This project highlights my experience in front-end design and back-end integration, ensuring a smooth and efficient user experience.",
                             minFontSize: 1,
                             maxLines: 20,
                           ),
@@ -230,17 +232,18 @@ class Sciverse extends StatelessWidget {
                       child: ListView(
                         children: [
                           Column(
-                            mainAxisAlignment: MainAxisAlignment.start,
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              AutoSizeText(
-                                style: TextStyle(
-                                  color: Colors.grey[200],
-                                  fontSize: ScreenUtil().setSp(20),
+                              Center(
+                                child: AutoSizeText(
+                                  style: TextStyle(
+                                    color: Colors.grey[200],
+                                    fontSize: ScreenUtil().setSp(20),
+                                  ),
+                                  "A website for FPS A-Level's science olympiad, SciVerse, designed to engage participants and facilitate easy registration. It features event details and a registration form that securely stores data in Firestore. This project highlights my expertise in front-end design and back-end integration, ensuring a smooth and efficient user experience.",
+                                  minFontSize: 1,
+                                  maxLines: 100,
                                 ),
-                                "A website for a science olympiad, SciVerse 2.0, designed to engage participants and facilitate easy registration. It features event details and a registration form that securely stores data in Firestore. This project highlights my expertise in front-end design and back-end integration, ensuring a smooth and efficient user experience.",
-                                minFontSize: 1,
-                                maxLines: 100,
                               ),
                             ],
                           ),

@@ -22,7 +22,7 @@ void _launchURL(String url) async {
 }
 
 List pages = [
-  HomePage(),
+  HomePageResponsive(),
   ResumePage(),
   AboutPage(),
   Projects(),

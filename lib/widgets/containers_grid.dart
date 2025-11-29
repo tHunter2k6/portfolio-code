@@ -2,6 +2,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:mywebsite/projects/lrautos.dart';
+import 'package:mywebsite/projects/thedac.dart';
 import 'package:mywebsite/widgets/projectContainer.dart';
 import 'package:mywebsite/projects/forex.dart';
 import 'package:mywebsite/projects/ignite.dart';
@@ -9,9 +11,12 @@ import 'package:mywebsite/projects/instagram.dart';
 import 'package:mywebsite/widgets/hover_container.dart';
 import 'package:mywebsite/projects/sciverse.dart';
 import 'package:mywebsite/projects/wardrobe.dart';
+import 'package:mywebsite/widgets/project_desc.dart';
 
 List<String> projects = [
   "Ignite App",
+  "LR Autos", // new
+  "theDAC", // new
   "Forex",
   "Sciverse Website",
   "Wardrobe",
@@ -20,6 +25,8 @@ List<String> projects = [
 
 List<String> projectsBg = [
   'lib/assets/ignite_logo1.png',
+  'lib/assets/lr_logo.png', // dummy
+  'lib/assets/dac_bg.png', // dummy
   'lib/assets/forex.png',
   'lib/assets/sciverse_logo.png',
   'lib/assets/wardrobe_1.png',
@@ -28,13 +35,17 @@ List<String> projectsBg = [
 
 List<String> projectsCovers = [
   'lib/assets/ignite_logo1.png',
+  'lib/assets/lr_logo.png', // dummy
+  'lib/assets/dac_bg.png', // dummy
   'lib/assets/forex.png',
   'lib/assets/sciverse_logo.png',
   'lib/assets/wardrobe_1.png',
   'lib/assets/instagram.png',
 ];
-List<Widget> projectPages = const [
+List<Widget> projectPages = [
   Ignite(),
+  Lrautos(), // dummy
+  Thedac(), // dummy
   Forex(),
   Sciverse(),
   Wardrobe(),
@@ -61,7 +72,7 @@ class _MyContainersGridState extends State<MyContainersGrid> {
             gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: (widget.isRecent == true ? 3 : 2),
               childAspectRatio: 1,
-              mainAxisSpacing: ScreenUtil().setHeight(0),
+              mainAxisSpacing: ScreenUtil().setHeight(50),
               crossAxisSpacing: ScreenUtil().setWidth(15),
             ),
             itemBuilder: (context, index) {

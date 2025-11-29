@@ -4,6 +4,7 @@ import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:mywebsite/pages/home_page.dart';
+import 'package:mywebsite/theme/my_theme.dart';
 
 class Wardrobe extends StatelessWidget {
   const Wardrobe({super.key});
@@ -11,20 +12,20 @@ class Wardrobe extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: myBackgroundColor,
+      backgroundColor: scaffoldBackgroundColor,
       appBar: AppBar(
-        backgroundColor: myAppBarColor,
         iconTheme: IconThemeData(
-          color: myBackgroundColor,
+          color: scaffoldBackgroundColor,
         ),
+        backgroundColor: myAppBarColor,
         title: AutoSizeText(
-          style: TextStyle(
-            color: myBackgroundColor,
-            fontWeight: FontWeight.bold,
-          ),
           'W A R D R O B E',
           minFontSize: 1,
           maxLines: 1,
+          style: TextStyle(
+            color: scaffoldBackgroundColor,
+            fontWeight: FontWeight.bold,
+          ),
         ),
         centerTitle: true,
       ),

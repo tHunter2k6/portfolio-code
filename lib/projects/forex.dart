@@ -4,6 +4,7 @@ import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:mywebsite/pages/home_page.dart';
+import 'package:mywebsite/theme/my_theme.dart';
 
 class Forex extends StatelessWidget {
   const Forex({super.key});
@@ -11,10 +12,10 @@ class Forex extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: myBackgroundColor,
+      backgroundColor: scaffoldBackgroundColor,
       appBar: AppBar(
         iconTheme: IconThemeData(
-          color: myBackgroundColor,
+          color: scaffoldBackgroundColor,
         ),
         backgroundColor: myAppBarColor,
         title: AutoSizeText(
@@ -22,7 +23,7 @@ class Forex extends StatelessWidget {
           minFontSize: 1,
           maxLines: 1,
           style: TextStyle(
-            color: myBackgroundColor,
+            color: scaffoldBackgroundColor,
             fontWeight: FontWeight.bold,
           ),
         ),
@@ -214,7 +215,7 @@ class Forex extends StatelessWidget {
                                   color: Colors.grey[200],
                                   fontSize: ScreenUtil().setSp(15),
                                 ),
-                                "A fast-paced simulation at the IGNITE Summit where participants traded virtual currencies (ICs) amid fluctuating values due to economic crises. With 8 rounds of increasing complexity, the game tested strategic thinking, risk management, and decision-making, aiming to accumulate the most ICs by the end.",
+                                "A fast-paced simulation at the FPS-IGNITE Summit where participants traded virtual currencies (ICs) amid fluctuating values due to economic crises. With 8 rounds of increasing complexity, the game tested strategic thinking, risk management, and decision-making, aiming to accumulate the most ICs by the end.",
                                 minFontSize: 1,
                                 maxLines: 100,
                               ),
@@ -266,7 +267,7 @@ class Forex extends StatelessWidget {
                                       color: Colors.grey[200],
                                       fontSize: ScreenUtil().setSp(20),
                                     ),
-                                    "A fast-paced simulation at the IGNITE Summit where participants traded virtual currencies (ICs) amid fluctuating values due to economic crises. With 8 rounds of increasing complexity, the game tested strategic thinking, risk management, and decision-making, aiming to accumulate the most ICs by the end.",
+                                    "A fast-paced simulation at the FPS-IGNITE Summit where participants traded virtual currencies (ICs) amid fluctuating values due to economic crises. With 8 rounds of increasing complexity, the game tested strategic thinking, risk management, and decision-making, aiming to accumulate the most ICs by the end.",
                                     minFontSize: 1,
                                     maxLines: 100,
                                   ),
@@ -367,7 +368,7 @@ class Forex extends StatelessWidget {
                                 },
                                 child: Container(
                                   width: ScreenUtil().setWidth(500),
-                                  height: ScreenUtil().setHeight(300),
+                                  height: ScreenUtil().setHeight(200),
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(15),
                                     image: DecorationImage(
@@ -425,7 +426,7 @@ class Forex extends StatelessWidget {
                                 },
                                 child: Container(
                                   width: ScreenUtil().setWidth(500),
-                                  height: ScreenUtil().setHeight(300),
+                                  height: ScreenUtil().setHeight(250),
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(15),
                                     image: DecorationImage(

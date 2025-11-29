@@ -4,6 +4,8 @@ import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:mywebsite/pages/home_page.dart';
+import 'package:mywebsite/theme/my_theme.dart';
+import 'package:mywebsite/widgets/project_desc.dart';
 
 class ProjectContainer extends StatefulWidget {
   final String backgroundImage;
@@ -21,11 +23,14 @@ class ProjectContainer extends StatefulWidget {
 
 Map<String, String> projectsDetails = {
   "Ignite App":
-      "A fully functioning app hosting the Ignite Auction, easy booking of book tvc sets and more features.",
+      "App for FPS A-Level's event,Ignite, featuring Registration, Auction & Trading simulations, TVC sets booking and more.",
+  "LR Autos":
+      "A Customer Management System for an automobile workshop, LR Autos.",
+  "theDAC": "A portfolio website for an online business.",
   "Forex":
-      "A foreign exchange simulation software designed to give delegates a real world experience of trading.",
+      "A foreign exchange simulation software,for FPS Ignite 11.0, designed to give delegates a real world experience of trading.",
   "Sciverse Website":
-      "A basic landing page with a registration form hosted on firestore.",
+      "Website for FPS A-level's science olympiad, SciVerse, with a custom registration form hosted on firestore.",
   "Wardrobe":
       "Your own digital wardrobe! Save clothing items and create outfits. ",
   "Instagram":
@@ -41,7 +46,7 @@ class _ProjectContainerState extends State<ProjectContainer> {
             padding: EdgeInsets.symmetric(
               horizontal: ScreenUtil().setWidth(80),
             ),
-            child: GestureDetector(
+            child: InkWell(
               onTap: () {
                 Navigator.of(context).push(
                   MaterialPageRoute(
@@ -60,7 +65,7 @@ class _ProjectContainerState extends State<ProjectContainer> {
                       children: [
                         Container(
                           width: ScreenUtil().setWidth(350),
-                          height: ScreenUtil().setHeight(350),
+                          height: ScreenUtil().setHeight(250),
                           decoration: BoxDecoration(
                             color: Colors.grey[900],
                             borderRadius: BorderRadius.only(
@@ -74,8 +79,8 @@ class _ProjectContainerState extends State<ProjectContainer> {
                           ),
                         ),
                         Container(
-                          width: ScreenUtil().setWidth(350),
-                          height: ScreenUtil().setHeight(200),
+                          width: ScreenUtil().setWidth(300),
+                          height: ScreenUtil().setHeight(180),
                           decoration: BoxDecoration(
                             color: Colors.white,
                             borderRadius: BorderRadius.only(
@@ -89,12 +94,15 @@ class _ProjectContainerState extends State<ProjectContainer> {
                               Padding(
                                 padding:
                                     EdgeInsets.all(ScreenUtil().setWidth(12.0)),
-                                child: AutoSizeText(
-                                  widget.text,
-                                  style: TextStyle(
-                                    color: Colors.black,
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: ScreenUtil().setSp(20),
+                                child: Center(
+                                  child: AutoSizeText(
+                                    textAlign: TextAlign.center,
+                                    widget.text,
+                                    style: TextStyle(
+                                      color: Colors.black,
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: ScreenUtil().setSp(20),
+                                    ),
                                   ),
                                 ),
                               ),
@@ -102,11 +110,12 @@ class _ProjectContainerState extends State<ProjectContainer> {
                                 padding:
                                     EdgeInsets.all(ScreenUtil().setWidth(12.0)),
                                 child: AutoSizeText(
+                                  textAlign: TextAlign.center,
                                   "${projectsDetails[widget.text]}",
-                                  maxLines: 3,
+                                  maxLines: 4,
                                   minFontSize: 1,
                                   style: TextStyle(
-                                    color: Colors.grey,
+                                    color: Colors.grey.shade600,
                                     fontSize: ScreenUtil().setSp(16),
                                   ),
                                 ),

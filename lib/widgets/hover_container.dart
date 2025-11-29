@@ -19,13 +19,13 @@ class HoverContainer extends StatefulWidget {
 
 class _HoverContainerState extends State<HoverContainer> {
   bool _isHovered = false;
-  Map<String, String> projects = {
-    "Ignite App": "123Ignite App ",
-    "Forex": "Forex ",
-    "Sciverse Website": "Sciverse Website ",
-    "Wardrobe": "Wardrobe ",
-    "Instagram": "Instagram ",
-  };
+  // Map<String, String> projects = {
+  //   "Ignite App": "123Ignite App ",
+  //   "Forex": "Forex ",
+  //   "Sciverse Website": "Sciverse Website ",
+  //   "Wardrobe": "Wardrobe ",
+  //   "Instagram": "Instagram ",
+  // };
 
   @override
   Widget build(BuildContext context) {
@@ -65,6 +65,7 @@ class _HoverContainerState extends State<HoverContainer> {
                         ? 400
                         : 200),
                 decoration: BoxDecoration(
+                  color: Colors.grey.shade900,
                   image: DecorationImage(
                     fit: BoxFit.contain,
                     image: AssetImage(widget.backgroundImage),

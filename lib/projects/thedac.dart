@@ -6,8 +6,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:mywebsite/pages/home_page.dart';
 import 'package:mywebsite/theme/my_theme.dart';
 
-class Instagram extends StatelessWidget {
-  const Instagram({super.key});
+class Thedac extends StatelessWidget {
+  const Thedac({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -19,27 +19,31 @@ class Instagram extends StatelessWidget {
         ),
         backgroundColor: myAppBarColor,
         title: AutoSizeText(
-          'I N S T A G R A M?',
+          'T H E D A C',
           minFontSize: 1,
           maxLines: 1,
           style: TextStyle(
             color: scaffoldBackgroundColor,
             fontWeight: FontWeight.bold,
+            fontSize: 20.sp,
           ),
         ),
         centerTitle: true,
       ),
+
+      // * PORTRAIT MODE *
       body: MediaQuery.of(context).orientation == Orientation.portrait
           ? Center(
               child: Padding(
-                padding: EdgeInsets.all(ScreenUtil().setWidth(20)),
+                padding: EdgeInsets.all(20.w),
                 child: ListView(
                   children: [
+                    // IMAGE CARD
                     Container(
-                      padding: EdgeInsets.all(ScreenUtil().setWidth(30)),
+                      padding: EdgeInsets.all(25.w),
                       decoration: BoxDecoration(
                         color: Colors.grey[850],
-                        borderRadius: BorderRadius.circular(15),
+                        borderRadius: BorderRadius.circular(15.r),
                         boxShadow: [
                           BoxShadow(
                             color: Colors.black26,
@@ -61,7 +65,7 @@ class Instagram extends StatelessWidget {
                                     Container(
                                       height: double.infinity,
                                       width: double.infinity,
-                                      color: Colors.black.withOpacity(0.2),
+                                      color: Colors.black.withOpacity(0.25),
                                     ),
                                     Center(
                                       child: InteractiveViewer(
@@ -77,12 +81,14 @@ class Instagram extends StatelessWidget {
                                           ),
                                           decoration: BoxDecoration(
                                             borderRadius:
-                                                BorderRadius.circular(20),
+                                                BorderRadius.circular(20.r),
                                           ),
                                           child: AspectRatio(
                                             aspectRatio: 16 / 9,
-                                            child:
-                                                Image.asset('lib/assets/3.png'),
+                                            child: Image.asset(
+                                              'lib/assets/dac.jpeg',
+                                              fit: BoxFit.cover,
+                                            ),
                                           ),
                                         ),
                                       ),
@@ -94,26 +100,26 @@ class Instagram extends StatelessWidget {
                           );
                         },
                         child: Container(
-                          width: ScreenUtil().setWidth(500),
-                          height: ScreenUtil().setHeight(200),
+                          width: 500.w,
+                          height: 200.h,
                           decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10),
                             image: DecorationImage(
-                              fit: BoxFit.cover,
-                              image: AssetImage('lib/assets/3.png'),
+                              fit: BoxFit.fitWidth,
+                              image: AssetImage('lib/assets/dac.jpeg'),
                             ),
                           ),
                         ),
                       ),
                     ),
-                    SizedBox(
-                      height: ScreenUtil().setHeight(20),
-                    ),
+
+                    SizedBox(height: 20.h),
+
+                    // DESCRIPTION CARD
                     Container(
-                      padding: EdgeInsets.all(ScreenUtil().setWidth(30)),
+                      padding: EdgeInsets.all(25.w),
                       decoration: BoxDecoration(
                         color: Colors.grey[850],
-                        borderRadius: BorderRadius.circular(15),
+                        borderRadius: BorderRadius.circular(15.r),
                         boxShadow: [
                           BoxShadow(
                             color: Colors.black26,
@@ -122,52 +128,38 @@ class Instagram extends StatelessWidget {
                           ),
                         ],
                       ),
-                      child: Column(
-                        children: [
-                          AutoSizeText(
-                            "My Own Instagram ",
-                            minFontSize: 1,
-                            maxLines: 5,
-                            style: TextStyle(
-                              color: Color(0xFF40C4FF),
-                              fontWeight: FontWeight.bold,
-                              fontSize: ScreenUtil().setSp(15),
-                            ),
-                          ),
-                          SizedBox(height: ScreenUtil().setHeight(15)),
-                          Column(
-                            children: [
-                              AutoSizeText(
-                                style: TextStyle(
-                                  color: Colors.grey[200],
-                                  fontSize: 15.sp,
-                                ),
-                                "As my first ever project I created an instagram clone app. The sole reason for this project was to understand how flutter and firebase worked. This is not my brainchild, this is all youtube. You can create your own user, follow other accounts, and even upload images!",
-                                minFontSize: 1,
-                                maxLines: 10,
-                              ),
-                            ],
-                          ),
-                        ],
+                      child: AutoSizeText(
+                        "A portfolio website made for ‘theDAC’, a digital services business that manages and sets up online stores for clients. theDAC provides storefront setup, product uploads, design assets, and overall digital management — all showcased through a clean, modern interface.",
+                        minFontSize: 1,
+                        maxLines: 6,
+                        style: TextStyle(
+                          color: Colors.grey[200],
+                          fontSize: 15.sp,
+                        ),
                       ),
                     ),
+
+                    SizedBox(height: 35.h),
                   ],
                 ),
               ),
             )
+
+          // * LANDSCAPE MODE *
           : Center(
               child: Padding(
-                padding: EdgeInsets.all(ScreenUtil().setWidth(20)),
+                padding: EdgeInsets.all(20.w),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
+                    // TEXT BLOCK
                     Container(
-                      height: ScreenUtil().setHeight(400),
-                      width: ScreenUtil().setWidth(490),
-                      padding: EdgeInsets.all(ScreenUtil().setWidth(30)),
+                      width: 480.w,
+                      height: 300.h,
+                      padding: EdgeInsets.all(30.w),
                       decoration: BoxDecoration(
                         color: Colors.grey[850],
-                        borderRadius: BorderRadius.circular(15),
+                        borderRadius: BorderRadius.circular(15.r),
                         boxShadow: [
                           BoxShadow(
                             color: Colors.black26,
@@ -176,42 +168,30 @@ class Instagram extends StatelessWidget {
                           ),
                         ],
                       ),
-                      child: ListView(
-                        children: [
-                          Column(
-                            children: [
-                              AutoSizeText(
-                                "My Own Instagram ",
-                                minFontSize: 1,
-                                maxLines: 5,
-                                style: TextStyle(
-                                  color: Color(0xFF40C4FF),
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: ScreenUtil().setSp(25),
-                                ),
+                      child: Center(
+                        child: ListView(
+                          children: [
+                            AutoSizeText(
+                              "A modern portfolio website built for ‘theDAC’, a digital services company that helps clients manage and operate their online shops. From store setup and product uploads to graphics and digital optimization, theDAC’s offerings are presented in a clean, professional layout.",
+                              minFontSize: 1,
+                              maxLines: 8,
+                              style: TextStyle(
+                                color: Colors.grey[200],
+                                fontSize: 20.sp,
                               ),
-                              SizedBox(height: ScreenUtil().setHeight(15)),
-                              AutoSizeText(
-                                style: TextStyle(
-                                  color: Colors.grey[200],
-                                  fontSize: ScreenUtil().setSp(20),
-                                ),
-                                "As my first ever project I created an instagram clone app. The sole reason for this project was to understand how flutter and firebase worked. This is not my brainchild, this is all youtube. You can create your own user, follow other accounts, and even upload images!",
-                                minFontSize: 1,
-                                maxLines: 10,
-                              ),
-                            ],
-                          ),
-                        ],
+                            ),
+                          ],
+                        ),
                       ),
                     ),
+
+                    // IMAGE BLOCK
                     Container(
-                      height: ScreenUtil().setHeight(400),
-                      width: ScreenUtil().setWidth(490),
-                      padding: EdgeInsets.all(ScreenUtil().setWidth(30)),
+                      height: 300.h,
+                      padding: EdgeInsets.all(30.w),
                       decoration: BoxDecoration(
                         color: Colors.grey[850],
-                        borderRadius: BorderRadius.circular(10),
+                        borderRadius: BorderRadius.circular(15.r),
                         boxShadow: [
                           BoxShadow(
                             color: Colors.black26,
@@ -233,7 +213,7 @@ class Instagram extends StatelessWidget {
                                     Container(
                                       height: double.infinity,
                                       width: double.infinity,
-                                      color: Colors.black.withOpacity(0.2),
+                                      color: Colors.black.withOpacity(0.25),
                                     ),
                                     Center(
                                       child: Container(
@@ -245,11 +225,11 @@ class Instagram extends StatelessWidget {
                                                 0.9,
                                         decoration: BoxDecoration(
                                           borderRadius:
-                                              BorderRadius.circular(20),
+                                              BorderRadius.circular(20.r),
                                           image: DecorationImage(
                                             fit: BoxFit.cover,
-                                            image:
-                                                AssetImage('lib/assets/3.png'),
+                                            image: AssetImage(
+                                                'lib/assets/dac.jpeg'),
                                           ),
                                         ),
                                       ),
@@ -261,12 +241,12 @@ class Instagram extends StatelessWidget {
                           );
                         },
                         child: Container(
-                          width: ScreenUtil().setWidth(500),
-                          height: ScreenUtil().setHeight(200),
+                          width: 500.w,
+                          height: 200.h,
                           decoration: BoxDecoration(
                             image: DecorationImage(
-                              fit: BoxFit.cover,
-                              image: AssetImage('lib/assets/3.png'),
+                              fit: BoxFit.fitWidth,
+                              image: AssetImage('lib/assets/dac.jpeg'),
                             ),
                           ),
                         ),
